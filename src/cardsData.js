@@ -21,3 +21,7 @@ const cardList = [
     avaliableCredit: 3000
   }
 ];
+
+function validateProperty (person, cardArray, property) {
+  return cardArray.filter(card => card[property].includes(person[property]))
+}
