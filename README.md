@@ -2,6 +2,10 @@
 
 A React web app that allows customers to filter though all the avaliable cards and pick the right one for them. 
 
+### First step: 
+
+Clone this repository and run `npm install` to install all the dependencies. 
+
 ### Run the app: 
 
 In the project directory, you can run:
