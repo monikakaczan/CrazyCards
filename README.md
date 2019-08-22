@@ -2,6 +2,16 @@
 
 A React web app that allows customers to filter though all the avaliable cards and pick the right one for them. 
 
+### Tech stack: 
+- [x] JavaScript
+- [x] Node.js
+- [x] React
+- [x] Redux <br>
+
+### Testing: 
+- [x] Jest
+- [x] Enzyme 
+
 ### First step: 
 
 Clone this repository and run `npm install` to install all the dependencies. 
