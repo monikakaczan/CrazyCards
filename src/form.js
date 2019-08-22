@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import cardList from './cardsData'
 
 class Form extends Component {
 
@@ -27,6 +28,7 @@ class Form extends Component {
 
   render(){
     return(
+      <form>
       <div>
       <label>Emoployment type</label>
            <select value= {this.state.employmentType} onChange={this.handleEmploymentType}>
@@ -43,6 +45,8 @@ class Form extends Component {
               </select>
           </div>
         </div>
+        <button type="submit">Submit</button>
+    </form>
     )
   }
 
