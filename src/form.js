@@ -16,6 +16,12 @@ class Form extends Component {
     })
   }
 
+  handleAnnualIncome = (event) => {
+     this.setState({
+       annualIncome: event.target.value
+     })
+   }
+
 
 
 
@@ -29,7 +35,13 @@ class Form extends Component {
             <option value = "student">Student</option>
           </select>
 
-        //
+          <div>
+            <label>Annual income</label>
+            <select value = {this.state.annualIncome} onChange={this.handleAnnualIncome}>
+              <option value = "lowerIncome">less than £16,000</option>
+              <option value = "higherIncome">more than £16,000</option>
+              </select>
+          </div>
         </div>
     )
   }

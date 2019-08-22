@@ -21,3 +21,13 @@ it("when simulating a change, select should update its value student", () => {
   const wrapper = mount(<Form value="student" onChange={jest.fn()} />);
   expect(wrapper.update("select").props().value).toBe("student");
 });
+
+it("when simulating a change, select should update its value lower income", () => {
+  const wrapper = mount(<Form value="lowerIncome" onChange={jest.fn()} />);
+  expect(wrapper.update("select").props().value).toBe("lowerIncome");
+});
+
+it("when simulating a change, select should update its value higher income", () => {
+  const wrapper = mount(<Form value="higherIncome" onChange={jest.fn()} />);
+  expect(wrapper.update("select").props().value).toBe("higherIncome");
+});
