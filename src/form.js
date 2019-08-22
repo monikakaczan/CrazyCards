@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import cardList from './cardsData'
+import cardsData from './cardsData'
 
 class Form extends Component {
 
@@ -9,7 +9,13 @@ class Form extends Component {
       employmentType:'',
       annualIncome:''
     }
+    this.callback=props.callback
   }
+
+  handleSubmit = event => {
+       event.preventDefault()
+       this.callback(this.state)
+    }
 
   handleEmploymentType = (event) => {
     this.setState({
@@ -24,11 +30,9 @@ class Form extends Component {
    }
 
 
-
-
   render(){
     return(
-      <form>
+      <form onSubmit={this.handleSubmit}>
       <div>
       <label>Emoployment type</label>
            <select value= {this.state.employmentType} onChange={this.handleEmploymentType}>
