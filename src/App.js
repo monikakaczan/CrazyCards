@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Form from '../src/form'
 
-function App() {
+class App extends Component {
+  render(){
   return (
     <div className="App">
       <Form />
     </div>
   );
+}
 }
 
 export default App;
