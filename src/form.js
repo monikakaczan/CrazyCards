@@ -10,23 +10,26 @@ class Form extends Component {
     }
   }
 
+  handleEmploymentType = (event) => {
+    this.setState({
+      employmentType: event.target.value
+    })
+  }
+
+
+
+
   render(){
     return(
       <div>
       <label>Emoployment type</label>
-           <select value= {this.state.employmentType}>
+           <select value= {this.state.employmentType} onChange={this.handleEmploymentType}>
             <option value = "part-time">Part-time</option>
             <option value = "full-time">Full-time</option>
             <option value = "student">Student</option>
           </select>
 
-          <div>
-          <label>Annual income</label>
-          <select value = {this.state.annualIncome}>
-            <option value = "lowerIncome">less than £16,000</option>
-            <option value = "higherIncome">more than £16,000</option>
-            </select>
-        </div>
+        //
         </div>
     )
   }
