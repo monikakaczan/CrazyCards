@@ -11,4 +11,4 @@ export const Cards = (props) => {
 
   return employmentTypeQualified.map((card, index) => <ul style={{ listStyleType: "none" }}>
   <li key={index}>{card.name}</li> </ul> );
-};///ordered or unordered list here
+};
