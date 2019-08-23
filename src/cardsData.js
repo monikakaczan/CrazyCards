@@ -1,27 +1,36 @@
-const cardList = [
-  {
-    id: 0,
-    name: 'Student Life',
-    employmentType: ['student'],
-    annualIncome: ['less than £16,000'],
-    avaliableCredit: 1200
-  },
-  {
-    id: 1,
-    name: 'Anywhere Card',
-    employmentType: ['student', 'part-time', 'full-time'],
-    annualIncome: ['more than £16,000'],
-    avaliableCredit: 300
-  },
-  {
-    id: 2,
-    name: 'Liquid Card',
-    employmentType: ['student', 'part-time', 'full-time'],
-    annualIncome: ['more than £16,000'],
-    avaliableCredit: 3000
-  }
-];
-
-function validateProperty (person, cardList, property) {
-  return cardList.filter(card => card[property].includes(person[property]))
-}
+// import React from 'react'
+//
+// export class Cards extends Component {
+// const cardList = [
+//     {
+//       id: 0,
+//       name: 'Student Life',
+//       employmentType: ['student'],
+//       annualIncome: ['less than £16,000'],
+//       avaliableCredit: 1200
+//     },
+//     {
+//       id: 1,
+//       name: 'Anywhere Card',
+//       employmentType: ['student', 'part-time', 'full-time'],
+//       annualIncome: ['more than £16,000'],
+//       avaliableCredit: 300
+//     },
+//     {
+//       id: 2,
+//       name: 'Liquid Card',
+//       employmentType: ['student', 'part-time', 'full-time'],
+//       annualIncome: ['more than £16,000'],
+//       avaliableCredit: 3000
+//     }
+//   ];
+//
+//     function validateProperty (person, cardList, property) {
+//       return cardList.filter(card => card[property].includes(person[property]))
+//     }
+//     const Cards = (props) => (
+//      const employmentTypeQualified = validateProperty(props.person, cardList, 'employmentType')
+//      return employmentTypeQualified.map(card => <p> {card.name}</p>)
+//    )
+//   }
+// }
