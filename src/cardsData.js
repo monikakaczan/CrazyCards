@@ -22,6 +22,6 @@ const cardList = [
   }
 ];
 
-function validateProperty (person, cardArray, property) {
-  return cardArray.filter(card => card[property].includes(person[property]))
+function validateProperty (person, cardList, property) {
+  return cardList.filter(card => card[property].includes(person[property]))
 }
