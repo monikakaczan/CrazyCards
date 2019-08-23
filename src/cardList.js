@@ -1,6 +1,16 @@
 export const cardList = [
   {
     id: 0,
+    name: "Liquid Card",
+    bto: "Balance Transfer Offer Duration: 0 months",
+    pod: "Purchase Offer Duration: 0 Months",
+    apr: "Apr: 33.9%",
+    employmentType: ["student", "part-time", "full-time"],
+    annualIncome: ["higherIncome"],
+    avaliableCredit: "£" + 3000
+  },
+  {
+    id: 1,
     name: "Student Life",
     apr: "Apr: 18.9%",
     bto: "Balance Transfer Offer Duration: 0 months",
@@ -10,7 +20,7 @@ export const cardList = [
     avaliableCredit: "£" + 1200
   },
   {
-    id: 1,
+    id: 2,
     name: "Anywhere Card",
     apr: "Apr: 33.9%",
     bto: "Balance Transfer Offer Duration: 12 months",
@@ -18,15 +28,6 @@ export const cardList = [
     employmentType: ["student", "part-time", "full-time"],
     annualIncome: ["higherIncome", "lowerIncome"],
     avaliableCredit: "£" + 300
-  },
-  {
-    id: 2,
-    name: "Liquid Card",
-    bto: "Balance Transfer Offer Duration: 0 months",
-    pod: "Purchase Offer Duration: 0 Months",
-    apr: "Apr: 33.9%",
-    employmentType: ["student", "part-time", "full-time"],
-    annualIncome: ["higherIncome"],
-    avaliableCredit: "£" + 3000
   }
+
 ];
