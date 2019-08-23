@@ -1,12 +1,14 @@
-// import React, { Component } from 'react';
-// // import { render } from 'react-dom';
-// // import Form from '../src/form'
-// // export class Cards extends Component {
-// //
-// //
-// //
-// //
-// //
-// //
-// //
-// // export default Cards;
+import React from 'react';
+import { validateProperty } from './validateProperty'
+import {cardList } from './cardList'
+
+export const Cards = (props) => {
+  const employmentTypeQualified = validateProperty(
+    props.person,
+    cardList,
+    "employmentType"
+  );
+
+  return employmentTypeQualified.map((card, index) => <ul style={{ listStyleType: "none" }}>
+  <li key={index}>{card.name}</li> </ul> );
+};///ordered or unordered list here

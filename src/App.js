@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Form from "../src/form";
-import Cards from "../src/form";
+import { Form } from "./Form";
+import { Cards } from "./Cards";
 
 class App extends Component {
   constructor(props) {
