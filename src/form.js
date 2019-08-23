@@ -12,7 +12,7 @@ export class Form extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.callback(this.state)
+    this.props.callback(this.state);
   };
 
   handleEmploymentType = event => {

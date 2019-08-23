@@ -2,22 +2,31 @@ export const cardList = [
   {
     id: 0,
     name: "Student Life",
-    annualIncome: ["lowerIncome"],
+    apr: "Apr: 18.9%",
+    bto: "Balance Transfer Offer Duration: 0 months",
+    pod: "Purchase Offer Duration: 6 Months",
     employmentType: ["student"],
-    avaliableCredit: 1200
+    annualIncome: ["lowerIncome", "higherIncome"],
+    avaliableCredit: "£" + 1200
   },
   {
     id: 1,
     name: "Anywhere Card",
-    annualIncome: ["higherIncome"],
+    apr: "Apr: 33.9%",
+    bto: "Balance Transfer Offer Duration: 12 months",
+    pod: "Purchase Offer Duration: 6 Months",
     employmentType: ["student", "part-time", "full-time"],
-    avaliableCredit: 300
+    annualIncome: ["higherIncome", "lowerIncome"],
+    avaliableCredit: "£" + 300
   },
   {
     id: 2,
     name: "Liquid Card",
-    annualIncome: ["higherIncome"],
+    bto: "Balance Transfer Offer Duration: 0 months",
+    pod: "Purchase Offer Duration: 0 Months",
+    apr: "Apr: 33.9%",
     employmentType: ["student", "part-time", "full-time"],
-    avaliableCredit: 3000
+    annualIncome: ["higherIncome"],
+    avaliableCredit: "£" + 3000
   }
 ];
