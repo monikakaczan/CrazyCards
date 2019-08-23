@@ -6,7 +6,6 @@ A React web app that allows customers to filter though all the avaliable cards a
 - [x] JavaScript
 - [x] Node.js
 - [x] React
-- [x] Redux <br>
 
 ### Testing: 
 - [x] Jest
