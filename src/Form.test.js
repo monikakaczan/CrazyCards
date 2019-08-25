@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import Form from "./Form";
+import renderer from 'react-test-renderer';
+import { Form } from "./Form";
 import Enzyme, { mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 Enzyme.configure({ adapter: new Adapter() });
@@ -30,4 +30,11 @@ it("when simulating a change, select should update its value lower income", () =
 it("when simulating a change, select should update its value higher income", () => {
   const wrapper = mount(<Form value="higherIncome" onChange={jest.fn()} />);
   expect(wrapper.update("select").props().value).toBe("higherIncome");
+});
+
+it("calls handleSubmit when the form is submitted", () => {
+  const onSubmitFn = jest.fn();
+  const wrapper = mount(<Form onSubmit={onSubmitFn}/>);
+  const form = wrapper.find('form');
+  wrapper.prop('onSubmit') === 'submit'
 });

@@ -6,9 +6,9 @@ export const Cards = props => {
   const employmentTypeQualified = validateProperty(
     props.person,
     cardList,
-    "employmentType",
-    "annualIcome"
+    "employmentType" && "annualIncome"
   );
+  var sum = 0;
 
   return employmentTypeQualified.map((card, index) => (
     <ul style={{ listStyleType: "none" }}>
@@ -18,8 +18,11 @@ export const Cards = props => {
         <br />
         {card.pod}
         <br />
-        {card.avaliableCredit}
-      </li>{" "}
+        Credit: £{card.avaliableCredit}
+        <br />
+      </li>
+      <br />
+      Total credit avaliable for all : £{(sum += card.avaliableCredit)}
     </ul>
   ));
 };

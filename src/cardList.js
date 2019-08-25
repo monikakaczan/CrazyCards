@@ -5,9 +5,9 @@ export const cardList = [
     bto: "Balance Transfer Offer Duration: 0 months",
     pod: "Purchase Offer Duration: 0 Months",
     apr: "Apr: 33.9%",
-    employmentType: ["student", "part-time", "full-time"],
     annualIncome: ["higherIncome"],
-    avaliableCredit: "£" + 3000
+    employmentType: ["student", "part-time", "full-time"],
+    avaliableCredit:  3000
   },
   {
     id: 1,
@@ -17,7 +17,7 @@ export const cardList = [
     pod: "Purchase Offer Duration: 6 Months",
     employmentType: ["student"],
     annualIncome: ["lowerIncome", "higherIncome"],
-    avaliableCredit: "£" + 1200
+    avaliableCredit: 1200
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const cardList = [
     pod: "Purchase Offer Duration: 6 Months",
     employmentType: ["student", "part-time", "full-time"],
     annualIncome: ["higherIncome", "lowerIncome"],
-    avaliableCredit: "£" + 300
+    avaliableCredit:  300
   }
 
 ];
