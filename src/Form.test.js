@@ -41,7 +41,8 @@ it("calls handleSubmit when the form is submitted", () => {
 
 it("mocks preventDeault()", () => {
   const preventDefaultFn = jest.fn();
-  const wrapper = mount(<Form preventDeault={preventDefaultFn}/>);
+  const onSubmitFn = jest.fn();
+  const wrapper = mount(<Form onSubmit={onSubmitFn}/>);
   const form = wrapper.find('form');
 
   wrapper.prop('submit', preventDefaultFn);
