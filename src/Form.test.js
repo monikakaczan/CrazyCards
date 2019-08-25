@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import renderer from 'react-test-renderer';
 import { Form } from "./Form";
-import Enzyme, { mount } from "enzyme";
+import Enzyme, { mount }  from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -38,3 +38,12 @@ it("calls handleSubmit when the form is submitted", () => {
   const form = wrapper.find('form');
   wrapper.prop('onSubmit') === 'submit'
 });
+
+it("mocks preventDeault()", () => {
+  const preventDefaultFn = jest.fn();
+  const wrapper = mount(<Form preventDeault={preventDefaultFn}/>);
+  const form = wrapper.find('form');
+
+  wrapper.prop('submit', preventDefaultFn);
+
+})
