@@ -25,11 +25,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser
 
 ### Run tests: 
 
-### `npm run test`
+### ```npm test```
+  After the tests load, to run all the test suites please type: `a` in terminal
 
 ### Run test coverage: 
 
-### ` npm run coverage` 
+### `npm run coverage` 
 
-Test coverage > 95% achieved 
+   Test coverage > 95% achieved 
 
