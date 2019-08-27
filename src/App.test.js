@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { Form } from "./Form";
+import { Form } from "./form";
 import { Cards } from "./Cards";
 import Enzyme, { mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
