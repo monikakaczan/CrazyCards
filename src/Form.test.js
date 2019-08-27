@@ -16,7 +16,6 @@ it("initializes with employment type and annual income", function() {
     employmentType: "partTime"
   });
 });
-// if the user changes employment type, change the state on handle submit
 
 it("if the user changes employment type, change the state on handle submit", function() {
   const handleSubmitFn = jest.fn();
@@ -44,4 +43,3 @@ it("if the user changes annual income, change the state on handle submit", funct
     employmentType: "partTime"
   });
 });
-// if the user changes annual income, change the state on handle submit

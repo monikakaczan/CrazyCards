@@ -18,7 +18,7 @@ export const Cards = props => {
   var sum = 0;
 
   const avaliableCards = annualIncomeQualified.map((card, index) => (
-    <li key={index}>
+    <li key={index} className="items">
       {card.name} <br />
       {card.bto}
       <br />
