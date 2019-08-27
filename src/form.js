@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-//deconstructed import ES6
 export class Form extends Component {
   constructor(props) {
     super(props);
