@@ -8,13 +8,13 @@ export const Cards = props => {
     cardList,
     "employmentType"
   );
-  console.log({employmentTypeQualified});
+  console.log({ employmentTypeQualified });
   const annualIncomeQualified = validateProperty(
     props.person,
     employmentTypeQualified,
     "annualIncome"
   );
-  console.log({annualIncomeQualified});
+  console.log({ annualIncomeQualified });
   var sum = 0;
 
   const avaliableCards = annualIncomeQualified.map((card, index) => (

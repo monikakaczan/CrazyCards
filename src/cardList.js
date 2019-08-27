@@ -7,7 +7,7 @@ export const cardList = [
     apr: "Apr: 33.9%",
     annualIncome: ["higherIncome"],
     employmentType: [],
-    avaliableCredit:  3000
+    avaliableCredit: 3000
   },
   {
     id: 1,
@@ -27,7 +27,6 @@ export const cardList = [
     pod: "Purchase Offer Duration: 6 Months",
     employmentType: ["student", "part-time", "full-time"],
     annualIncome: ["higherIncome", "lowerIncome"],
-    avaliableCredit:  300
+    avaliableCredit: 300
   }
-
 ];

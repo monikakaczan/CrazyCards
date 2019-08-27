@@ -1,51 +1,47 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import renderer from 'react-test-renderer';
 import { Form } from "./Form";
-import Enzyme, { mount }  from "enzyme";
+import Enzyme, { mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 Enzyme.configure({ adapter: new Adapter() });
 
-it("when simulating a change, select should update its value part-time", () => {
-  const wrapper = mount(<Form value="part-time" onChange={jest.fn()} />);
-  expect(wrapper.update("select").props().value).toBe("part-time");
-});
-
-it("when simulating a change, select should update its value full-time", () => {
-  const wrapper = mount(<Form value="full-time" onChange={jest.fn()} />);
-  expect(wrapper.update("select").props().value).toBe("full-time");
-});
-
-
-it("when simulating a change, select should update its value student", () => {
-  const wrapper = mount(<Form value="student" onChange={jest.fn()} />);
-  expect(wrapper.update("select").props().value).toBe("student");
-});
-
-it("when simulating a change, select should update its value lower income", () => {
-  const wrapper = mount(<Form value="lowerIncome" onChange={jest.fn()} />);
-  expect(wrapper.update("select").props().value).toBe("lowerIncome");
-});
-
-it("when simulating a change, select should update its value higher income", () => {
-  const wrapper = mount(<Form value="higherIncome" onChange={jest.fn()} />);
-  expect(wrapper.update("select").props().value).toBe("higherIncome");
-});
-
-it("calls handleSubmit when the form is submitted", () => {
-  const onSubmitFn = jest.fn();
-  const wrapper = mount(<Form onSubmit={onSubmitFn}/>);
-  const form = wrapper.find('form');
-  wrapper.prop('onSubmit') === 'submit'
-});
-// form initializes with employment type and annual Income
-
-it.only("initializes with employment type and annual income", function() {
+it("initializes with employment type and annual income", function() {
   const handleSubmitFn = jest.fn();
-  const wrapper = mount(<Form callback={handleSubmitFn}/>);
-  wrapper.submit()
-  expect(handleSubmitFn).toHaveBeenCalledWith(true)
-})
-// handle submit calls function
+  const wrapper = mount(<Form callback={handleSubmitFn} />);
+
+  wrapper.find("form").simulate("submit");
+
+  expect(handleSubmitFn).toHaveBeenCalledWith({
+    annualIncome: "lowerIncome",
+    employmentType: "part-time"
+  });
+});
 // if the user changes employment type, change the state on handle submit
+
+it("if the user changes employment type, change the state on handle submit", function() {
+  const handleSubmitFn = jest.fn();
+  const wrapper = mount(<Form callback={handleSubmitFn} />);
+  wrapper
+    .find("select")
+    .at(0)
+    .simulate("change", { target: { value: "full-time" } });
+  wrapper.find("form").simulate("submit");
+  expect(handleSubmitFn).toHaveBeenCalledWith({
+    annualIncome: "lowerIncome",
+    employmentType: "full-time"
+  });
+});
+it("if the user changes annual income, change the state on handle submit", function() {
+  const handleSubmitFn = jest.fn();
+  const wrapper = mount(<Form callback={handleSubmitFn} />);
+  wrapper
+    .find("select")
+    .at(1)
+    .simulate("change", { target: { value: "higherIncome" } });
+  wrapper.find("form").simulate("submit");
+  expect(handleSubmitFn).toHaveBeenCalledWith({
+    annualIncome: "higherIncome",
+    employmentType: "part-time"
+  });
+});
 // if the user changes annual income, change the state on handle submit
