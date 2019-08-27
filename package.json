@@ -13,14 +13,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "scripts": {
-      "start": "react-scripts start",
-      "build": "react-scripts build",
-      "test": "react-scripts test --env=jsdom",
-      "eject": "react-scripts eject",
-      "coverage": "react-scripts test --env=jsdom --watchAll=false --coverage"
-    }
+    "coverage": "react-scripts test --env=jsdom --watchAll=false --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,23 +30,23 @@
       "last 1 safari version"
     ]
   },
+  "coverageReporters": [
+    "text"
+  ],
+  "snapshotSerializers": [
+    "my-serializer-module"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 90,
+      "functions": 90,
+      "lines": 90,
+      "statements": 90
+    }
+  },
   "devDependencies": {
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "coverageReporters": [
-      "text"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 90,
-        "functions": 90,
-        "lines": 90,
-        "statements": 90
-      }
-    },
-    "snapshotSerializers": [
-      "my-serializer-module"
-    ]
-  },
-  "jest-cli": "^24.9.0"
+    "jest-cli": "^24.9.0"
+  }
 }

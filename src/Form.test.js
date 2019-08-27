@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import renderer from 'react-test-renderer';
+// import renderer from 'react-test-renderer';
 import { Form } from "./Form";
 import Enzyme, { mount }  from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
@@ -38,13 +38,14 @@ it("calls handleSubmit when the form is submitted", () => {
   const form = wrapper.find('form');
   wrapper.prop('onSubmit') === 'submit'
 });
+// form initializes with employment type and annual Income
 
-it("mocks preventDeault()", () => {
-  const preventDefaultFn = jest.fn();
-  const onSubmitFn = jest.fn();
-  const wrapper = mount(<Form onSubmit={onSubmitFn}/>);
-  const form = wrapper.find('form');
-
-  wrapper.prop('submit', preventDefaultFn);
-
+it.only("initializes with employment type and annual income", function() {
+  const handleSubmitFn = jest.fn();
+  const wrapper = mount(<Form callback={handleSubmitFn}/>);
+  wrapper.submit()
+  expect(handleSubmitFn).toHaveBeenCalledWith(true)
 })
+// handle submit calls function
+// if the user changes employment type, change the state on handle submit
+// if the user changes annual income, change the state on handle submit

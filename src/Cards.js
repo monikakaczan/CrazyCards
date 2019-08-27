@@ -6,23 +6,37 @@ export const Cards = props => {
   const employmentTypeQualified = validateProperty(
     props.person,
     cardList,
-    "employmentType" && "annualIncome"
+    "employmentType"
   );
+  console.log({employmentTypeQualified});
+  const annualIncomeQualified = validateProperty(
+    props.person,
+    employmentTypeQualified,
+    "annualIncome"
+  );
+  console.log({annualIncomeQualified});
   var sum = 0;
 
-  return employmentTypeQualified.map((card, index) => (
-    <ul style={{ listStyleType: "none" }}>
-      <li key={index}>
-        {card.name} <br />
-        {card.bto}
-        <br />
-        {card.pod}
-        <br />
-        Credit: £{card.avaliableCredit}
-        <br />
-      </li>
+  const avaliableCards = annualIncomeQualified.map((card, index) => (
+    <li key={index}>
+      {card.name} <br />
+      {card.bto}
       <br />
-      Total credit avaliable for all : £{(sum += card.avaliableCredit)}
-    </ul>
+      {card.pod}
+      <br />
+      Credit: £{card.avaliableCredit}
+      <br />
+    </li>
   ));
+
+  annualIncomeQualified.forEach(function(card) {
+    sum += card.avaliableCredit;
+  });
+
+  return (
+    <div>
+      <ul style={{ listStyleType: "none" }}>{avaliableCards}</ul>
+      Total credit avaliable for all : £{sum}
+    </div>
+  );
 };
