@@ -13,7 +13,7 @@ it("initializes with employment type and annual income", function() {
 
   expect(handleSubmitFn).toHaveBeenCalledWith({
     annualIncome: "lowerIncome",
-    employmentType: "part-time"
+    employmentType: "partTime"
   });
 });
 // if the user changes employment type, change the state on handle submit
@@ -24,11 +24,11 @@ it("if the user changes employment type, change the state on handle submit", fun
   wrapper
     .find("select")
     .at(0)
-    .simulate("change", { target: { value: "full-time" } });
+    .simulate("change", { target: { value: "fullTime" } });
   wrapper.find("form").simulate("submit");
   expect(handleSubmitFn).toHaveBeenCalledWith({
     annualIncome: "lowerIncome",
-    employmentType: "full-time"
+    employmentType: "fullTime"
   });
 });
 it("if the user changes annual income, change the state on handle submit", function() {
@@ -41,7 +41,7 @@ it("if the user changes annual income, change the state on handle submit", funct
   wrapper.find("form").simulate("submit");
   expect(handleSubmitFn).toHaveBeenCalledWith({
     annualIncome: "higherIncome",
-    employmentType: "part-time"
+    employmentType: "partTime"
   });
 });
 // if the user changes annual income, change the state on handle submit
