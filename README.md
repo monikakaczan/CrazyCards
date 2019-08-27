@@ -4,7 +4,6 @@ A React web app that allows customers to filter though all the avaliable cards a
 
 ### Tech stack: 
 - [x] JavaScript
-- [x] Node.js
 - [x] React
 
 ### Testing: 
