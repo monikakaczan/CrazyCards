@@ -25,7 +25,7 @@ export const cardList = [
     apr: "Apr: 33.9%",
     bto: "Balance Transfer Offer Duration: 12 months",
     pod: "Purchase Offer Duration: 6 Months",
-    employmentType: ["student", "part-time", "full-time"],
+    employmentType: ["student", "partTime", "fullTime"],
     annualIncome: ["higherIncome", "lowerIncome"],
     avaliableCredit: 300
   }
