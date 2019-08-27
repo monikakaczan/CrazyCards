@@ -12,6 +12,6 @@ it("filters cards based on student employment type", function() {
     employmentType: "student"
   };
   const wrapper = mount(<Cards person={student} />);
-  expect(wrapper.find('.items')).toBeDefined();
-  expect(wrapper.find('.items')).toHaveLength(2);
+  expect(wrapper.find(".items")).toBeDefined();
+  expect(wrapper.find(".items")).toHaveLength(2);
 });
