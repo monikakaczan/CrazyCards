@@ -3,7 +3,7 @@
 A React web app that allows customers to filter though all the avaliable cards and pick the right one for them. 
 
 ### Link to deployed application: 
-[crazycards.surge.sh](crazycards.surge.sh) 
+Open [http://crazycards.surge.sh](www.crazycards.surge.sh) 
 
 ### Tech stack: 
 - [x] JavaScript
